@@ -4,7 +4,7 @@ VAR
 BEGIN
       sum :=0;
       FOR i FROM 0 TO V1.length-1 STEP 1  DO
-            sum = sum+V1[i]+V2[i]
+            sum = sum+V1[i]*V2[i]
       END_FOR
 END
 
@@ -15,7 +15,7 @@ VAR
 BEGIN
       sum :=0;
       FOR i FROM 0 TO V1.length-1 STEP 1  DO
-            sum = sum+V1[i]+V2[i]
+            sum = sum+V1[i]*V2[i]
       END_FOR      
       
       RETURN sum ;
@@ -43,7 +43,7 @@ BEGIN
       
       FOR i FROM 0 TO n.length STEP 1  DO
             FOR j FROM i+1 TO n.length STEP 1  DO
-            summ:= dot_product_function( n[i],n[j]
+            summ:= dot_product_function( n[i],n[j]);
                   IF ( summ = 0) THEN
                         write("two orthogonal vectors ")
                   ELSE
