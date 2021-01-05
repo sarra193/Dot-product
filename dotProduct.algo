@@ -1,0 +1,55 @@
+PROCEDURE dot_product ( var V1,V2  : ARRAY_OF INTEGER[2])
+VAR
+            sum :INTEGER;
+BEGIN
+      sum :=0;
+      FOR i FROM 0 TO V1.length-1 STEP 1  DO
+            sum = sum+V1[i]+V2[i]
+      END_FOR
+END
+
+
+FUNCTION dot_product_function(var V1,V2  : ARRAY_OF INTEGER[2]) : INTEGER
+VAR
+      sum :INTEGER;
+BEGIN
+      sum :=0;
+      FOR i FROM 0 TO V1.length-1 STEP 1  DO
+            sum = sum+V1[i]+V2[i]
+      END_FOR      
+      
+      RETURN sum ;
+END
+
+ALGORITHM dotProduct
+VAR
+      n  : ARRAY_OF array[];
+BEGIN
+
+/* using the procudure */
+      FOR i FROM 0 TO n.length STEP 1  DO
+            FOR j FROM i+1 TO n.length STEP 1  DO
+                  IF ( dot_product( n[i],n[j] = 0) THEN
+                        write("two orthogonal vectors ")
+                  ELSE
+                  write("not two orthogonal vectors ")
+                  END_IF
+            END_FOR
+      END_FOR
+
+
+
+      /* using the function */
+      
+      FOR i FROM 0 TO n.length STEP 1  DO
+            FOR j FROM i+1 TO n.length STEP 1  DO
+            summ:= dot_product_function( n[i],n[j]
+                  IF ( summ = 0) THEN
+                        write("two orthogonal vectors ")
+                  ELSE
+                  write("not two orthogonal vectors ")
+                  END_IF
+            END_FOR
+      END_FOR
+
+END
